@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "jktNcC4JXuSsuRD2JWC8FcX7A2I7chYmiPsJj+HwYNwkNUQwcT6ISEaE70ha7QsVWGFhFb8cIBM3akNIAkdDVw==",
+  "dgSpecHash": "kYh/ZggASoIW5+YYfFGgfHtqnple5ptMWkNg1+z+k8CiBi6wxwGWj5QY58q8HG9VGjUkL7j4jb0hZ7Sxp3vgBg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\Desktop\\ProniaApi\\src\\Infrastructure\\ProniaApi.Persistence\\ProniaApi.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\Desktop\\Api_Startttt\\src\\Infrastructure\\ProniaApi.Persistence\\ProniaApi.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.0\\fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

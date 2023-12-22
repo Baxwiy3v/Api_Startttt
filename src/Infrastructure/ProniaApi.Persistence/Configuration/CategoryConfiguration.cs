@@ -8,7 +8,7 @@ namespace ProniaApi.Persistence.Configuration
 	{
 		public void Configure(EntityTypeBuilder<Category> builder)
 		{
-			builder.Property(b=>b.Name).IsRequired().HasMaxLength(60);
+			builder.Property(b=>b.Name).IsRequired().HasMaxLength(50);
 		}
 	}
 }

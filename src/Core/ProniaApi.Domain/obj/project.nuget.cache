@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wQP8WgwAnQ+WFiNRh/W7HHoJadsCC2bbTD8v7iBqyPmNXSh91lHMUR1POOCx0ZXwbXIomA5LQf+ANcPbzxftLw==",
+  "dgSpecHash": "FlX3gcV9YxWeDJvV2Ys7jj3Gm3j8DiKPUQEETxovdjIQpVr7xPsoJn+GfNgbNHhttpxGybo0BSVCcQC/VYjI7Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\Desktop\\ProniaApi\\src\\Core\\ProniaApi.Domain\\ProniaApi.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\Desktop\\Api_Startttt\\src\\Core\\ProniaApi.Domain\\ProniaApi.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
