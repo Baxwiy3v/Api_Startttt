@@ -37,7 +37,9 @@ namespace ProniaApi.Persistence.Implementations.Services
 		public async Task<ICollection<GetTagDto>> GetAllAsync(int page, int take)
 		{
 			var tags = await _repository
-				.GetAllAsync(skip: (page - 1) * take, take: take, isTracking: false)
+				.GetAllAsync(
+				skip: (page - 1) * take, take: take,
+				isTracking: false)
 				.ToListAsync();
 
 			var result = _mapper.Map<ICollection<GetTagDto>>(tags);
@@ -45,12 +47,27 @@ namespace ProniaApi.Persistence.Implementations.Services
 			return result;
 		}
 
-		public Task<GetTagDto> GetAsync(int id)
+		public async Task<GetTagDto> GetAsync(int id)
 		{
-			throw new NotImplementedException();
-		}
+            Tag tag = await _repository.GetByIdAsync(id);
 
-		public async Task UpdateAsync(int id, UpdateTagDto tagDto)
+            if (tag is null) throw new Exception("Not found");
+
+            return new GetTagDto(tag.Id, tag.Name);
+        }
+
+        public async Task SoftDeleteAsync(int id)
+        {
+            Tag tag = await _repository.GetByIdAsync(id);
+
+            if (tag is null) throw new Exception("Not found");
+
+            _repository.SoftDelete(tag);
+
+            await _repository.SaveChangesAsync();
+        }
+
+        public async Task UpdateAsync(int id, UpdateTagDto tagDto)
 		{
 			Tag tag = await _repository.GetByIdAsync(id);
 

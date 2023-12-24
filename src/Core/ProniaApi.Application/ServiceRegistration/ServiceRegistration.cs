@@ -10,7 +10,9 @@ namespace ProniaApi.Application.ServiceRegistration
 		public static IServiceCollection AddApplicationService(this IServiceCollection services)
 		{
 			services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
             services.AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters().AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
             return services;
 		}
 	}

@@ -28,10 +28,15 @@ namespace ProniaApi.Persistence.Implementations.Repositories.Generic
 			_table.Remove(item);
 		}
 
-		public IQueryable<T> GetAllAsync(Expression<Func<T, bool>>? expression = null, Expression<Func<T, object>>? orderExpression = null,
-bool isDesc = false, int skip = 0,
+		public IQueryable<T> GetAllAsync(
+			Expression<Func<T, bool>>? expression = null,
+			Expression<Func<T, object>>? orderExpression = null,
+            bool isDesc = false,
+			int skip = 0,
 			int take = 0,
-			bool isTracking = true, params string[] includes)
+			bool isTracking = true,
+            bool isDeleted = false,
+            params string[] includes)
 		{
 			var query = _table.AsQueryable();
 
@@ -39,9 +44,9 @@ bool isDesc = false, int skip = 0,
 
 			if (orderExpression is not null)
 			{
-				if (isDesc)
-					query = query.OrderByDescending(orderExpression);
-				else query = query.OrderBy(orderExpression);
+				if (isDesc) query = query.OrderByDescending(orderExpression);
+
+                else query = query.OrderBy(orderExpression);
 			}
 			if (skip != 0) query = query.Skip(skip);
 
@@ -71,7 +76,13 @@ bool isDesc = false, int skip = 0,
 			await _context.SaveChangesAsync();
 		}
 
-		public void Update(T item)
+        public void SoftDelete(T item)
+        {
+            item.IsDeleted = true;
+            _table.Update(item);
+        }
+
+        public void Update(T item)
 		{
 			_table.Update(item);
 		}

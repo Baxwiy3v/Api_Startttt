@@ -19,9 +19,13 @@ namespace ProniaApi.Persistence.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+           
             modelBuilder.Entity<Category>().HasQueryFilter(c => c.IsDeleted == false);
+           
             modelBuilder.Entity<Tag>().HasQueryFilter(c => c.IsDeleted == false);
+
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+          
             base.OnModelCreating(modelBuilder);
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

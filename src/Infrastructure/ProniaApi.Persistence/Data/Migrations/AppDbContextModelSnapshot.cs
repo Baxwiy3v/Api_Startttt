@@ -50,7 +50,7 @@ namespace ProniaApi.Persistence.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("ProniaApi.Domain.Entities.Color", b =>
@@ -84,7 +84,7 @@ namespace ProniaApi.Persistence.Data.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Colors");
+                    b.ToTable("Colors", (string)null);
                 });
 
             modelBuilder.Entity("ProniaApi.Domain.Entities.Product", b =>
@@ -136,7 +136,7 @@ namespace ProniaApi.Persistence.Data.Migrations
 
                     b.HasIndex("ColorId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("ProniaApi.Domain.Entities.ProductColor", b =>
@@ -172,7 +172,7 @@ namespace ProniaApi.Persistence.Data.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductColor");
+                    b.ToTable("ProductColor", (string)null);
                 });
 
             modelBuilder.Entity("ProniaApi.Domain.Entities.ProductTag", b =>
@@ -208,7 +208,7 @@ namespace ProniaApi.Persistence.Data.Migrations
 
                     b.HasIndex("TagId");
 
-                    b.ToTable("ProductTags");
+                    b.ToTable("ProductTags", (string)null);
                 });
 
             modelBuilder.Entity("ProniaApi.Domain.Entities.Tag", b =>
@@ -242,7 +242,7 @@ namespace ProniaApi.Persistence.Data.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Tags");
+                    b.ToTable("Tags", (string)null);
                 });
 
             modelBuilder.Entity("ProniaApi.Domain.Entities.Product", b =>
