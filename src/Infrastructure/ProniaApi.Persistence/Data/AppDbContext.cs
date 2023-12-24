@@ -1,13 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProniaApi.Domain.Entities;
 using ProniaApi.Domain.Entities.Common;
+using ProniaApi.Persistence.Common;
 using System.Reflection;
 
 namespace ProniaApi.Persistence.Data
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions options):base(options)
+        public AppDbContext(DbContextOptions options) : base(options)
         {
 
         }
@@ -19,13 +20,11 @@ namespace ProniaApi.Persistence.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           
-            modelBuilder.Entity<Category>().HasQueryFilter(c => c.IsDeleted == false);
-           
-            modelBuilder.Entity<Tag>().HasQueryFilter(c => c.IsDeleted == false);
+
+            modelBuilder.ApplyQueryFilters();
 
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-          
+
             base.OnModelCreating(modelBuilder);
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

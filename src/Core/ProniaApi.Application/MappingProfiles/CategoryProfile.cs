@@ -11,6 +11,8 @@ namespace ProniaApi.Application.MappingProfiles
 			CreateMap<Category, GetCategoryDto>().ReverseMap();
 
 			CreateMap<CreateCategoryDto, Category>();
-		}
+
+            CreateMap<Category, IncludeCategoryDto>();
+        }
 	}
 }

@@ -34,20 +34,18 @@ namespace ProniaApi.Persistence.Implementations.Services
 			throw new NotImplementedException();
 		}
 
-		public async Task<ICollection<GetTagDto>> GetAllAsync(int page, int take)
-		{
-			var tags = await _repository
-				.GetAllAsync(
-				skip: (page - 1) * take, take: take,
-				isTracking: false)
-				.ToListAsync();
+        public async Task<ICollection<GetTagDto>> GetAllAsync(int page, int take)
+        {
+            var tags = await _repository
+				.GetAllWhere(skip: (page - 1) * take, take: take,
+				isTracking: false).ToListAsync();
 
-			var result = _mapper.Map<ICollection<GetTagDto>>(tags);
+            var result = _mapper.Map<ICollection<GetTagDto>>(tags);
 
-			return result;
-		}
+            return result;
+        }
 
-		public async Task<GetTagDto> GetAsync(int id)
+        public async Task<GetTagDto> GetAsync(int id)
 		{
             Tag tag = await _repository.GetByIdAsync(id);
 

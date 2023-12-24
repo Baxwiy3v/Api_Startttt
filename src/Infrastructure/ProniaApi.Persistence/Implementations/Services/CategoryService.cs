@@ -41,23 +41,20 @@ namespace ProniaApi.Persistence.Implementations.Services
 			await _repository.SaveChangesAsync();
 		}
 
-		public async Task<ICollection<GetCategoryDto>> GetAllAsync(int page, int take)
-		{
-			var categories = await _repository
-				.GetAllAsync
-				(skip: (page - 1) * take, take: take,
-                isTracking: false, 
-				isDeleted: true
-                )
+        public async Task<ICollection<GetCategoryDto>> GetAllAsync(int page, int take)
+        {
+            var categories = await _repository
+				.GetAllWhere(skip: (page - 1) * take, take: take,
+				isTracking: false, ignoreQuery: true)
 				.ToListAsync();
 
-			var result = _mapper.Map<ICollection<GetCategoryDto>>(categories);
+            var result = _mapper.Map<ICollection<GetCategoryDto>>(categories);
 
-			return result;
-		}
+            return result;
+        }
 
 
-		public async Task<GetCategoryDto> GetAsync(int id)
+        public async Task<GetCategoryDto> GetAsync(int id)
 		{
 			Category category = await _repository.GetByIdAsync(id);
 
