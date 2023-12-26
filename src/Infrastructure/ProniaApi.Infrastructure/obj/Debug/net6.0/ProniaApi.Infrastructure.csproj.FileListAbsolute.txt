@@ -32,3 +32,15 @@ C:\Users\Asus\Desktop\Api_Startttt\src\Infrastructure\ProniaApi.Infrastructure\o
 C:\Users\Asus\Desktop\Api_Startttt\src\Infrastructure\ProniaApi.Infrastructure\obj\Debug\net6.0\refint\ProniaApi.Infrastructure.dll
 C:\Users\Asus\Desktop\Api_Startttt\src\Infrastructure\ProniaApi.Infrastructure\obj\Debug\net6.0\ProniaApi.Infrastructure.pdb
 C:\Users\Asus\Desktop\Api_Startttt\src\Infrastructure\ProniaApi.Infrastructure\obj\Debug\net6.0\ref\ProniaApi.Infrastructure.dll
+C:\Users\ca.r214.16\Desktop\Api_Startttt\src\Infrastructure\ProniaApi.Infrastructure\bin\Debug\net6.0\ProniaApi.Infrastructure.deps.json
+C:\Users\ca.r214.16\Desktop\Api_Startttt\src\Infrastructure\ProniaApi.Infrastructure\bin\Debug\net6.0\ProniaApi.Infrastructure.dll
+C:\Users\ca.r214.16\Desktop\Api_Startttt\src\Infrastructure\ProniaApi.Infrastructure\bin\Debug\net6.0\ProniaApi.Infrastructure.pdb
+C:\Users\ca.r214.16\Desktop\Api_Startttt\src\Infrastructure\ProniaApi.Infrastructure\obj\Debug\net6.0\ProniaApi.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\ca.r214.16\Desktop\Api_Startttt\src\Infrastructure\ProniaApi.Infrastructure\obj\Debug\net6.0\ProniaApi.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ca.r214.16\Desktop\Api_Startttt\src\Infrastructure\ProniaApi.Infrastructure\obj\Debug\net6.0\ProniaApi.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ca.r214.16\Desktop\Api_Startttt\src\Infrastructure\ProniaApi.Infrastructure\obj\Debug\net6.0\ProniaApi.Infrastructure.AssemblyInfo.cs
+C:\Users\ca.r214.16\Desktop\Api_Startttt\src\Infrastructure\ProniaApi.Infrastructure\obj\Debug\net6.0\ProniaApi.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ca.r214.16\Desktop\Api_Startttt\src\Infrastructure\ProniaApi.Infrastructure\obj\Debug\net6.0\ProniaApi.Infrastructure.dll
+C:\Users\ca.r214.16\Desktop\Api_Startttt\src\Infrastructure\ProniaApi.Infrastructure\obj\Debug\net6.0\refint\ProniaApi.Infrastructure.dll
+C:\Users\ca.r214.16\Desktop\Api_Startttt\src\Infrastructure\ProniaApi.Infrastructure\obj\Debug\net6.0\ProniaApi.Infrastructure.pdb
+C:\Users\ca.r214.16\Desktop\Api_Startttt\src\Infrastructure\ProniaApi.Infrastructure\obj\Debug\net6.0\ref\ProniaApi.Infrastructure.dll

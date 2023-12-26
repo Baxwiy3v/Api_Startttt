@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Asus\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ca.r214.16\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Api_Startttt\\src\\Core\\ProniaApi.Domain\\ProniaApi.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\ca.r214.16\\Desktop\\Api_Startttt\\src\\Core\\ProniaApi.Domain\\ProniaApi.Domain.csproj",
       "projectName": "ProniaApi.Domain",
-      "projectPath": "C:\\Users\\Asus\\Desktop\\Api_Startttt\\src\\Core\\ProniaApi.Domain\\ProniaApi.Domain.csproj",
-      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asus\\Desktop\\Api_Startttt\\src\\Core\\ProniaApi.Domain\\obj\\",
+      "projectPath": "C:\\Users\\ca.r214.16\\Desktop\\Api_Startttt\\src\\Core\\ProniaApi.Domain\\ProniaApi.Domain.csproj",
+      "packagesPath": "C:\\Users\\ca.r214.16\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ca.r214.16\\Desktop\\Api_Startttt\\src\\Core\\ProniaApi.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ca.r214.16\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -66,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

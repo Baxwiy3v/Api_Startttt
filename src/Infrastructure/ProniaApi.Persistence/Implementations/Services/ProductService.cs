@@ -4,11 +4,6 @@ using ProniaApi.Application.Abstractions.Repositories;
 using ProniaApi.Application.Abstractions.Services;
 using ProniaApi.Application.DTOs.Product;
 using ProniaApi.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProniaApi.Persistence.Implementations.Services
 {

@@ -5,6 +5,7 @@ using ProniaApi.Application.Abstractions.Repositories;
 using ProniaApi.Application.Abstractions.Services;
 using ProniaApi.Persistence.Data;
 using ProniaApi.Persistence.Implementations.Repositories;
+using ProniaApi.Persistence.Implementations.Repositoriesı;
 using ProniaApi.Persistence.Implementations.Services;
 
 namespace ProniaApi.Persistence.ServiceRegistration
@@ -16,16 +17,16 @@ namespace ProniaApi.Persistence.ServiceRegistration
 			services.AddDbContext<AppDbContext>(o => o.UseSqlServer(configuration.GetConnectionString("Default")));
 
 			services.AddScoped<ICategoryService, CategoryService>();
-
+            services.AddScoped<IProductService, ProductService>();
 			services.AddScoped<ITagService, TagService>();
 
-            services.AddScoped<IProductService, ProductService>();
 
-            services.AddScoped<ICategoryRepository, CategoryRepository>();
+
 
 			services.AddScoped<ITagRepository, TagRepository>();
-
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IColorRepository, ColorRepository>();
 
 
             return services;
