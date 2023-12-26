@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddPersistenceService(builder.Configuration);
 builder.Services.AddApplicationService();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

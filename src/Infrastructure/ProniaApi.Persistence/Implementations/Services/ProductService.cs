@@ -17,34 +17,42 @@ namespace ProniaApi.Persistence.Implementations.Services
         private readonly IProductRepository _repository;
         private readonly ICategoryRepository _categoryRepository;
         private readonly IMapper _mapper;
+        private readonly IColorRepository _colorRepository;
 
-        public ProductService(IProductRepository repository, IMapper mapper, ICategoryRepository categoryRepository)
+        public ProductService(
+            IProductRepository repository, 
+            IMapper mapper, 
+            ICategoryRepository categoryRepository,
+            IColorRepository colorRepository)
         {
             _repository = repository;
             _mapper = mapper;
             _categoryRepository = categoryRepository;
+            _colorRepository = colorRepository;
         }
 
         public async Task CreateAsync(CreateProductDto productDto)
         {
-            var product = _mapper.Map<Product>(productDto);
+            if (!await _repository.IsExistAsync(p => p.Name == productDto.Name))
+                throw new Exception("Not found");
 
-            bool result = await _repository.IsExistAsync(p => p.Name == product.Name);
+            if (!await _categoryRepository.IsExistAsync(c => c.Id == productDto.CategoryId)) 
+                throw new Exception("There is no such category");
 
-            if (result) throw new Exception("This product already exists");
+            Product product = _mapper.Map<Product>(productDto);
 
-            result = await _categoryRepository.IsExistAsync(c => c.Id == product.CategoryId);
+            product.ProductColors = new List<ProductColor>();
 
-            if (!result) throw new Exception("There is no such category");
+            foreach (var item in productDto.ColorIds)
+            {
+                if (!await _colorRepository.IsExistAsync(c => c.Id == item)) 
+                    throw new Exception("There is no such color");
+
+                product.ProductColors.Add(new ProductColor { ColorId = item });
+            }
             await _repository.AddAsync(product);
-            try
-            {
-                await _repository.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.InnerException);
-            }
+
+            await _repository.SaveChangesAsync();
 
         }
 
@@ -68,6 +76,38 @@ namespace ProniaApi.Persistence.Implementations.Services
                 .Map<ProductGetSingleDto>(product);
 
             return dto;
+        }
+        public async Task UpdateAsync(int id, ProductUpdateDto productDto)
+        {
+            Product existed = await _repository.GetByIdAsync(id, includes: nameof(Product.ProductColors));
+
+            if (existed is null)
+                throw new Exception("Not found");
+
+            if (productDto.CategoryId != existed.CategoryId)
+                if (!await _categoryRepository.IsExistAsync(c => c.Id == productDto.CategoryId)) 
+                    throw new Exception("Belə bir kateqoriya yoxdur");
+
+            existed = _mapper.Map(productDto, existed);
+
+            existed.ProductColors = existed.ProductColors = existed.ProductColors
+                .Where(p => productDto.ColorIds
+                .Any(c => p.ColorId == c))
+                .ToList();
+
+            foreach (var cId in productDto.ColorIds)
+            {
+                if (!await _colorRepository.IsExistAsync(c => c.Id == cId))
+                    throw new Exception("Not found");
+
+                if (!existed.ProductColors.Any(pc => pc.ColorId == cId))
+                {
+                    existed.ProductColors.Add(new ProductColor { ColorId = cId });
+                }
+            }
+            _repository.Update(existed);
+
+            await _repository.SaveChangesAsync();
         }
     }
 }

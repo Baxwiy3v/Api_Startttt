@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace ProniaApi.Application.Validators
 {
-    internal class CreateProductDtoValidator : AbstractValidator<CreateProductDto>
+    public class UpdateProductDtoValidator : AbstractValidator<ProductUpdateDto>
     {
-        public CreateProductDtoValidator()
+        public UpdateProductDtoValidator()
         {
-            RuleFor(p => p.Name).NotEmpty().WithMessage("Boş ola bilməz").MaximumLength(100).MinimumLength(3);
+            RuleFor(p => p.Name).NotEmpty().WithMessage("Boş ola bilməz").MaximumLength(100).MinimumLength(2);
 
             RuleFor(p => p.SKU).NotEmpty().MaximumLength(10);
 
@@ -20,12 +20,11 @@ namespace ProniaApi.Application.Validators
 
             RuleFor(p => p.Description).MaximumLength(1000);
 
-            RuleFor(p => p.CategoryId).Must(x => x > 0);
+            RuleFor(p => p.CategoryId).Must(c => c > 0);
 
-            RuleForEach(p => p.ColorIds).Must(x => x > 0).NotNull();
+            RuleForEach(p => p.ColorIds).Must(c => c > 0).NotNull();
 
             RuleFor(p => p.ColorIds).NotNull();
-
         }
     }
 }

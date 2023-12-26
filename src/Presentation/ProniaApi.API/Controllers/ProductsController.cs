@@ -37,5 +37,14 @@ namespace ProniaApi.API.Controllers
 
             return StatusCode(StatusCodes.Status201Created);
         }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, [FromForm] ProductUpdateDto productDto)
+        {
+            if (id <= 0) return StatusCode(StatusCodes.Status400BadRequest);
+
+            await _service.UpdateAsync(id, productDto);
+
+            return StatusCode(StatusCodes.Status204NoContent);
+        }
     }
 }

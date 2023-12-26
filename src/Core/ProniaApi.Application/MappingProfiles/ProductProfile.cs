@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProniaApi.Application.MappingProfiles
 {
-    internal class ProductProfile : Profile
+    public class ProductProfile : Profile
     {
         public ProductProfile()
         {
@@ -19,6 +19,7 @@ namespace ProniaApi.Application.MappingProfiles
 
             CreateMap<CreateProductDto, Product>();
 
+            CreateMap<Product, ProductUpdateDto>().ReverseMap();
         }
     }
 }
