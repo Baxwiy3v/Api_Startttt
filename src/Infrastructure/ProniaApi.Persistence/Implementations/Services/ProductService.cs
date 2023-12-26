@@ -28,7 +28,7 @@ namespace ProniaApi.Persistence.Implementations.Services
 
         public async Task CreateAsync(CreateProductDto productDto)
         {
-            if (!await _repository.IsExistAsync(p => p.Name == productDto.Name))
+            if (await _repository.IsExistAsync(p => p.Name == productDto.Name))
                 throw new Exception("Not found");
 
             if (!await _categoryRepository.IsExistAsync(c => c.Id == productDto.CategoryId)) 

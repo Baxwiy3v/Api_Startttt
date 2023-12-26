@@ -19,11 +19,12 @@ namespace ProniaApi.Persistence.ServiceRegistration
 			services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IProductService, ProductService>();
 			services.AddScoped<ITagService, TagService>();
+            services.AddScoped<IColorService, ColorService>();
 
 
 
 
-			services.AddScoped<ITagRepository, TagRepository>();
+            services.AddScoped<ITagRepository, TagRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IColorRepository, ColorRepository>();
