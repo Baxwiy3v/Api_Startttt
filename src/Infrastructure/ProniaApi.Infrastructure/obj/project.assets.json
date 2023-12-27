@@ -8,19 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ca.r214.16\\.nuget\\packages\\": {}
+    "C:\\Users\\Asus\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ca.r214.16\\Desktop\\Api_Startttt\\src\\Infrastructure\\ProniaApi.Infrastructure\\ProniaApi.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Api_Startttt\\src\\Infrastructure\\ProniaApi.Infrastructure\\ProniaApi.Infrastructure.csproj",
       "projectName": "ProniaApi.Infrastructure",
-      "projectPath": "C:\\Users\\ca.r214.16\\Desktop\\Api_Startttt\\src\\Infrastructure\\ProniaApi.Infrastructure\\ProniaApi.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\ca.r214.16\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ca.r214.16\\Desktop\\Api_Startttt\\src\\Infrastructure\\ProniaApi.Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\Asus\\Desktop\\Api_Startttt\\src\\Infrastructure\\ProniaApi.Infrastructure\\ProniaApi.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Asus\\Desktop\\Api_Startttt\\src\\Infrastructure\\ProniaApi.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ca.r214.16\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
