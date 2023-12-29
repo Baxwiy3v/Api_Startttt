@@ -6,5 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProniaApi.Application.DTOs.Users
 {
-    public record LoginDto(string UserNameOrEmail, string Password);
+    public record LoginDto(
+        string UserNameOrEmail, 
+        string Password);
 }

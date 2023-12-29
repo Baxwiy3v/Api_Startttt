@@ -32,7 +32,7 @@ namespace ProniaApi.Persistence.ServiceRegistration
             services.AddScoped<IProductService, ProductService>();
 			services.AddScoped<ITagService, TagService>();
             services.AddScoped<IColorService, ColorService>();
-
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
 
 
 

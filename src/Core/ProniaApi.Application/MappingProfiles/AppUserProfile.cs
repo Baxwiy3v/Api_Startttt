@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProniaApi.Application.MappingProfiles
 {
-    internal class AppUserProfile : Profile
+    public class AppUserProfile : Profile
     {
         public AppUserProfile()
         {

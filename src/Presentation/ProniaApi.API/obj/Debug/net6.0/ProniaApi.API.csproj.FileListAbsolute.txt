@@ -308,3 +308,11 @@ C:\Users\ca.r214.16\Desktop\Api_Startttt\src\Presentation\ProniaApi.API\obj\Debu
 C:\Users\ca.r214.16\Desktop\Api_Startttt\src\Presentation\ProniaApi.API\obj\Debug\net6.0\ProniaApi.API.pdb
 C:\Users\ca.r214.16\Desktop\Api_Startttt\src\Presentation\ProniaApi.API\obj\Debug\net6.0\ProniaApi.API.genruntimeconfig.cache
 C:\Users\ca.r214.16\Desktop\Api_Startttt\src\Presentation\ProniaApi.API\obj\Debug\net6.0\ref\ProniaApi.API.dll
+C:\Users\Asus\Desktop\Api_Startttt\src\Presentation\ProniaApi.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Asus\Desktop\Api_Startttt\src\Presentation\ProniaApi.API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Asus\Desktop\Api_Startttt\src\Presentation\ProniaApi.API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Asus\Desktop\Api_Startttt\src\Presentation\ProniaApi.API\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Asus\Desktop\Api_Startttt\src\Presentation\ProniaApi.API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Asus\Desktop\Api_Startttt\src\Presentation\ProniaApi.API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Asus\Desktop\Api_Startttt\src\Presentation\ProniaApi.API\bin\Debug\net6.0\ProniaApi.Infrastructure.dll
+C:\Users\Asus\Desktop\Api_Startttt\src\Presentation\ProniaApi.API\bin\Debug\net6.0\ProniaApi.Infrastructure.pdb
